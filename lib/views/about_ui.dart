@@ -23,39 +23,42 @@ class _AboutUIState extends State<AboutUI> {
           ),
         ),
       ),
-      body: Center(
-        child: Column(
-          children: [
-            SizedBox(height: 30),
-            Text(
-              'ผู้จัดทำ',
-              style: TextStyle(
-                fontSize: 22,
-                fontWeight: FontWeight.bold,
+      body: SingleChildScrollView(
+        child: Center(
+          child: Column(
+            children: [
+              SizedBox(height: 30),
+              Text(
+                'ผู้จัดทำ',
+                style: TextStyle(
+                  fontSize: 22,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
-            ),
-            SizedBox(height: 30),
-            Image.asset('assets/icon/saulogo.png', height: 200),
-            SizedBox(height: 20),
-            Text(
-              'มหาวิทยาลัยเอเชียอาคเนย์',
-              style: TextStyle(
-                fontSize: 18,
-                fontWeight: FontWeight.bold,
+              SizedBox(height: 30),
+              Image.asset('assets/icon/saulogo.png', height: 200),
+              SizedBox(height: 20),
+              Text(
+                'มหาวิทยาลัยเอเชียอาคเนย์',
+                style: TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
-            ),
-            SizedBox(height: 40),
-            Image.asset('assets/images/me.jpg', height: 200),
-            SizedBox(height: 20),
-            Text(
-              '6652410029\nพีระภัทร ล้ออัศจรรย์\ns6652410029@sau.ac.th\nสาขาเทคโนโลยีดิจิทัลและนวัตกรรม\nคณะศิลปศาสตร์และวิทยาศาสตร์',
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
+              SizedBox(height: 40),
+              Image.asset('assets/images/me.jpg', height: 200),
+              SizedBox(height: 20),
+              Text(
+                '6652410029\nพีระภัทร ล้ออัศจรรย์\ns6652410029@sau.ac.th\nสาขาเทคโนโลยีดิจิทัลและนวัตกรรม\nคณะศิลปศาสตร์และวิทยาศาสตร์',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
-            ),
-          ],
+              SizedBox(height: 50),
+            ],
+          ),
         ),
       ),
     );

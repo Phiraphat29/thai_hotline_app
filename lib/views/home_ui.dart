@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
 import 'package:thai_hotline_app/views/about_ui.dart';
 import 'package:thai_hotline_app/views/sub_a_home_ui.dart';
@@ -64,19 +65,31 @@ class _HomeUIState extends State<HomeUI> {
         items: [
           SalomonBottomBarItem(
               icon: Icon(Icons.wallet_travel_outlined),
-              title: Text('การเดินทาง'),
+              title: Text(
+                'การเดินทาง',
+                style: TextStyle(fontFamily: GoogleFonts.kanit().fontFamily),
+              ),
               selectedColor: Colors.blue),
           SalomonBottomBarItem(
               icon: Icon(Icons.fire_extinguisher_outlined),
-              title: Text('อุบัติเหตุ-เหตุฉุกเฉิน'),
+              title: Text(
+                'อุบัติเหตุ-เหตุฉุกเฉิน',
+                style: TextStyle(fontFamily: GoogleFonts.kanit().fontFamily),
+              ),
               selectedColor: Colors.red),
           SalomonBottomBarItem(
               icon: Icon(Icons.money_outlined),
-              title: Text('ธนาคาร'),
+              title: Text(
+                'ธนาคาร',
+                style: TextStyle(fontFamily: GoogleFonts.kanit().fontFamily),
+              ),
               selectedColor: Colors.green),
           SalomonBottomBarItem(
               icon: Icon(Icons.electric_bolt_outlined),
-              title: Text('สาธารณูปโภค'),
+              title: Text(
+                'สาธารณูปโภค',
+                style: TextStyle(fontFamily: GoogleFonts.kanit().fontFamily),
+              ),
               selectedColor: Colors.purple),
         ],
       ),
