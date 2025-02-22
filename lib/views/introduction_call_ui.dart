@@ -14,6 +14,15 @@ class IntroductionCallUI extends StatefulWidget {
 }
 
 class _IntroductionCallUIState extends State<IntroductionCallUI> {
+  int _selectedIndex = 0;
+
+  List<Color> dotColor = [
+    Colors.blue,
+    Colors.red,
+    Colors.green,
+    Colors.purple,
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,38 +32,30 @@ class _IntroductionCallUIState extends State<IntroductionCallUI> {
           pages: [
             PageViewModel(
               title: '',
-              bodyWidget: Builder(
-                builder: (BuildContext context) {
-                  return const SubAIntroductionCallUI();
-                },
-              ),
+              bodyWidget: SubAIntroductionCallUI(),
             ),
             PageViewModel(
               title: '',
-              bodyWidget: Builder(
-                builder: (BuildContext context) {
-                  return const SubBIntroductionCallUI();
-                },
-              ),
+              bodyWidget: SubBIntroductionCallUI(),
             ),
             PageViewModel(
               title: '',
-              bodyWidget: Builder(
-                builder: (BuildContext context) {
-                  return const SubCIntroductionCallUI();
-                },
-              ),
+              bodyWidget: SubCIntroductionCallUI(),
             ),
             PageViewModel(
               title: '',
-              bodyWidget: Builder(
-                builder: (BuildContext context) {
-                  return const SubDIntroductionCallUI();
-                },
-              ),
+              bodyWidget: SubDIntroductionCallUI(),
             ),
           ],
           scrollPhysics: ClampingScrollPhysics(),
+          dotsDecorator: DotsDecorator(
+            activeColor: dotColor[_selectedIndex],
+            size: Size(10, 10),
+            activeSize: Size(22, 10),
+            activeShape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(24),
+            ),
+          ),
           showSkipButton: true,
           skip: Text("ข้าม"),
           showNextButton: true,
@@ -70,6 +71,12 @@ class _IntroductionCallUIState extends State<IntroductionCallUI> {
                 builder: (context) => HomeUI(),
               ),
             );
+          },
+          onChange: (index) {
+            // เพิ่ม onPageChange
+            setState(() {
+              _selectedIndex = index;
+            });
           },
         ),
       ),

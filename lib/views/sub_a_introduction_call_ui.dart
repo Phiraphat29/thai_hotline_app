@@ -16,8 +16,15 @@ class _SubAIntroductionCallUIState extends State<SubAIntroductionCallUI> {
           SizedBox(
             height: MediaQuery.of(context).size.height * 0.02,
           ),
-          Image.asset('assets/images/travel.jpg'),
-          SizedBox(height: 80),
+          ClipRRect(
+            borderRadius: BorderRadius.all(Radius.circular(20)),
+            child: Image.asset(
+              'assets/images/travel.jpg',
+              height: 200,
+              fit: BoxFit.cover,
+            ),
+          ),
+          SizedBox(height: 50),
           Text(
             "เมื่อต้องเดินทางทั้งในเมือง ออกต่างจังหวัด\nจะใกล้หรือไกลเพียงใด\nสอบถามข้อมูลการเดินทาง การจราจร\nทางด่วน ทางหลัก ทางรอง\nเส้นทางเลี่ยงการจราจรติดขัด\nข้อมูลรถทัวร์ รถไฟ ขสมก. BTS MRT\nชักช้าอยู่ใย",
             textAlign: TextAlign.center,
@@ -33,7 +40,7 @@ class _SubAIntroductionCallUIState extends State<SubAIntroductionCallUI> {
               fontSize: 20,
             ),
           ),
-          SizedBox(height: 50),
+          SizedBox(height: 40),
           Text(
             'สายด่วน\nการเดินทาง',
             textAlign: TextAlign.center,

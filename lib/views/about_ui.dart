@@ -13,7 +13,18 @@ class _AboutUIState extends State<AboutUI> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        backgroundColor: Colors.black,
+        flexibleSpace: Container(
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              colors: [
+                Colors.blue.shade900,
+                Colors.amber.shade600,
+              ],
+              begin: Alignment.centerLeft,
+              end: Alignment.centerRight,
+            ),
+          ),
+        ),
         foregroundColor: Colors.white,
         title: Text(
           'สายด่วน THAILAND',
@@ -27,7 +38,7 @@ class _AboutUIState extends State<AboutUI> {
         child: Center(
           child: Column(
             children: [
-              SizedBox(height: 30),
+              SizedBox(height: 20),
               Text(
                 'ผู้จัดทำ',
                 style: TextStyle(
@@ -45,8 +56,10 @@ class _AboutUIState extends State<AboutUI> {
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              SizedBox(height: 40),
-              Image.asset('assets/images/me.jpg', height: 200),
+              SizedBox(height: 30),
+              ClipRRect(
+                  borderRadius: BorderRadius.all(Radius.circular(20)),
+                  child: Image.asset('assets/images/me.jpg', height: 200)),
               SizedBox(height: 20),
               Text(
                 '6652410029\nพีระภัทร ล้ออัศจรรย์\ns6652410029@sau.ac.th\nสาขาเทคโนโลยีดิจิทัลและนวัตกรรม\nคณะศิลปศาสตร์และวิทยาศาสตร์',

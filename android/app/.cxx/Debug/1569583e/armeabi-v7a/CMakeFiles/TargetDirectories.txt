@@ -1,0 +1,2 @@
+C:/CMobile/thai_hotline_app/android/app/.cxx/Debug/1569583e/armeabi-v7a/CMakeFiles/edit_cache.dir
+C:/CMobile/thai_hotline_app/android/app/.cxx/Debug/1569583e/armeabi-v7a/CMakeFiles/rebuild_cache.dir

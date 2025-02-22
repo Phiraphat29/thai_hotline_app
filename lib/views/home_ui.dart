@@ -17,6 +17,13 @@ class HomeUI extends StatefulWidget {
 class _HomeUIState extends State<HomeUI> {
   int _selectedIndex = 0;
 
+  List<Color> colorSet = [
+    Colors.blue,
+    Colors.red,
+    Colors.green,
+    Colors.purple,
+  ];
+
   List subHome = [
     SubAHomeUI(),
     SubBHomeUI(),
@@ -29,10 +36,11 @@ class _HomeUIState extends State<HomeUI> {
     return Scaffold(
       appBar: AppBar(
         foregroundColor: Colors.white,
-        backgroundColor: Colors.black,
+        backgroundColor: colorSet[_selectedIndex],
         centerTitle: true,
         actions: [
           IconButton(
+            icon: Icon(Icons.info_outline),
             onPressed: () {
               Navigator.push(
                 context,
@@ -41,7 +49,6 @@ class _HomeUIState extends State<HomeUI> {
                 ),
               );
             },
-            icon: Icon(Icons.info_outline),
           ),
         ],
         title: Text(
@@ -70,7 +77,7 @@ class _HomeUIState extends State<HomeUI> {
                 style: TextStyle(
                     fontFamily: GoogleFonts.notoSansThai().fontFamily),
               ),
-              selectedColor: Colors.blue),
+              selectedColor: colorSet[_selectedIndex]),
           SalomonBottomBarItem(
               icon: Icon(Icons.fire_extinguisher_outlined),
               title: Text(
@@ -78,7 +85,7 @@ class _HomeUIState extends State<HomeUI> {
                 style: TextStyle(
                     fontFamily: GoogleFonts.notoSansThai().fontFamily),
               ),
-              selectedColor: Colors.red),
+              selectedColor: colorSet[_selectedIndex]),
           SalomonBottomBarItem(
               icon: Icon(Icons.money_outlined),
               title: Text(
@@ -86,7 +93,7 @@ class _HomeUIState extends State<HomeUI> {
                 style: TextStyle(
                     fontFamily: GoogleFonts.notoSansThai().fontFamily),
               ),
-              selectedColor: Colors.green),
+              selectedColor: colorSet[_selectedIndex]),
           SalomonBottomBarItem(
               icon: Icon(Icons.electric_bolt_outlined),
               title: Text(
@@ -94,7 +101,7 @@ class _HomeUIState extends State<HomeUI> {
                 style: TextStyle(
                     fontFamily: GoogleFonts.notoSansThai().fontFamily),
               ),
-              selectedColor: Colors.purple),
+              selectedColor: colorSet[_selectedIndex]),
         ],
       ),
       body: subHome[_selectedIndex],

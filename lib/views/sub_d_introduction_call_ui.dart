@@ -16,7 +16,14 @@ class _SubDIntroductionCallUIState extends State<SubDIntroductionCallUI> {
           SizedBox(
             height: MediaQuery.of(context).size.height * 0.02,
           ),
-          Image.asset('assets/images/utility.jpg'),
+          ClipRRect(
+            borderRadius: BorderRadius.all(Radius.circular(20)),
+            child: Image.asset(
+              'assets/images/utility.jpg',
+              height: 200,
+              fit: BoxFit.cover,
+            ),
+          ),
           SizedBox(height: 50),
           Text(
             'น้ำไม่ไหล\nไฟฟ้าดับ\nโทรไม่ติด\nอินเตอร์เน็ตมีปัญหา\nเข้า Social Media ไม่ได้\nรอไม่ได้ โทรเลย !!!',
@@ -33,7 +40,7 @@ class _SubDIntroductionCallUIState extends State<SubDIntroductionCallUI> {
               fontSize: 20,
             ),
           ),
-          SizedBox(height: 50),
+          SizedBox(height: 40),
           Text(
             'สายด่วน\nสาธารณูปโภค',
             textAlign: TextAlign.center,

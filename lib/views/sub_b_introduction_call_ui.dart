@@ -16,9 +16,13 @@ class _SubBIntroductionCallUIState extends State<SubBIntroductionCallUI> {
           SizedBox(
             height: MediaQuery.of(context).size.height * 0.02,
           ),
-          Container(
-            width: 180,
-            child: Image.asset('assets/images/accident.jpg'),
+          ClipRRect(
+            borderRadius: BorderRadius.all(Radius.circular(20)),
+            child: Image.asset(
+              'assets/images/accident.jpg',
+              height: 200,
+              fit: BoxFit.cover,
+            ),
           ),
           SizedBox(height: 50),
           Text(
@@ -36,7 +40,7 @@ class _SubBIntroductionCallUIState extends State<SubBIntroductionCallUI> {
               fontSize: 20,
             ),
           ),
-          SizedBox(height: 50),
+          SizedBox(height: 40),
           Text(
             'สายด่วน\nอุบัติเหตุ-เหตุฉุกเฉิน',
             textAlign: TextAlign.center,
