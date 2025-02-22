@@ -21,7 +21,7 @@ class _ThaiHotlineAppState extends State<ThaiHotlineApp> {
       debugShowCheckedModeBanner: false,
       home: IntroductionCallUI(),
       theme: ThemeData(
-        textTheme: GoogleFonts.kanitTextTheme(
+        textTheme: GoogleFonts.baiJamjureeTextTheme(
           Theme.of(context).textTheme,
         ),
       ),

@@ -67,28 +67,32 @@ class _HomeUIState extends State<HomeUI> {
               icon: Icon(Icons.wallet_travel_outlined),
               title: Text(
                 'การเดินทาง',
-                style: TextStyle(fontFamily: GoogleFonts.kanit().fontFamily),
+                style: TextStyle(
+                    fontFamily: GoogleFonts.notoSansThai().fontFamily),
               ),
               selectedColor: Colors.blue),
           SalomonBottomBarItem(
               icon: Icon(Icons.fire_extinguisher_outlined),
               title: Text(
                 'อุบัติเหตุ-เหตุฉุกเฉิน',
-                style: TextStyle(fontFamily: GoogleFonts.kanit().fontFamily),
+                style: TextStyle(
+                    fontFamily: GoogleFonts.notoSansThai().fontFamily),
               ),
               selectedColor: Colors.red),
           SalomonBottomBarItem(
               icon: Icon(Icons.money_outlined),
               title: Text(
                 'ธนาคาร',
-                style: TextStyle(fontFamily: GoogleFonts.kanit().fontFamily),
+                style: TextStyle(
+                    fontFamily: GoogleFonts.notoSansThai().fontFamily),
               ),
               selectedColor: Colors.green),
           SalomonBottomBarItem(
               icon: Icon(Icons.electric_bolt_outlined),
               title: Text(
                 'สาธารณูปโภค',
-                style: TextStyle(fontFamily: GoogleFonts.kanit().fontFamily),
+                style: TextStyle(
+                    fontFamily: GoogleFonts.notoSansThai().fontFamily),
               ),
               selectedColor: Colors.purple),
         ],
