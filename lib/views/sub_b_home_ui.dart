@@ -31,7 +31,7 @@ class _SubBHomeUIState extends State<SubBHomeUI> {
               children: [
                 SizedBox(height: 25),
                 Text(
-                  'สายด่วน\nการเดินทาง',
+                  'สายด่วน\nอุบัติเหตุ-เหตุฉุกเฉิน',
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     color: Colors.black,
